@@ -1,0 +1,24 @@
+
+/* 1. Universal Selector */
+* {
+    font-family: Arial, sans-serif;
+}
+
+/* 2. Element Selector */
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+/* 3. Class Selector */
+.card {
+    background-color: lightyellow;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+/* 4. ID Selector */
+#hero {
+    color: red;
+    background-color: lightblue;
+}
