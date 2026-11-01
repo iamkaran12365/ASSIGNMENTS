@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 9.3 - Grid and Flexbox</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar using Flexbox */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222;
+            padding: 15px 25px;
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        /* Page sections using Grid */
+        .container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-areas:
+                "header header"
+                "main sidebar"
+                "footer footer";
+            gap: 15px;
+            padding: 20px;
+        }
+
+        header {
+            grid-area: header;
+            background-color: lightblue;
+            padding: 30px;
+            text-align: center;
+        }
+
+        main {
+            grid-area: main;
+            background-color: lightgreen;
+            padding: 30px;
+        }
+
+        aside {
+            grid-area: sidebar;
+            background-color: lightyellow;
+            padding: 30px;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: lightgray;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "header"
+                    "main"
+                    "sidebar"
+                    "footer";
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>My Website</h2>
+
+        <div>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <header>
+            <h1>Welcome to My Website</h1>
+            <p>This is the header section.</p>
+        </header>
+
+        <main>
+            <h2>Main Content</h2>
+            <p>This section uses CSS Grid.</p>
+        </main>
+
+        <aside>
+            <h2>Sidebar</h2>
+            <p>Extra information goes here.</p>
+        </aside>
+
+        <footer>
+            <p>Copyright 2026 - My Website</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
