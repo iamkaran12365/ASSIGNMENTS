@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid Template Areas</title>
+
+    <style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "head head"
+        "side main"
+        "foot foot";
+
+    grid-template-columns: 1fr 3fr;
+    gap: 15px;
+    padding: 20px;
+}
+
+.head {
+    grid-area: head;
+    background-color: orange;
+    padding: 30px;
+}
+
+.side {
+    grid-area: side;
+    background-color: lightblue;
+    padding: 50px 20px;
+}
+
+.main {
+    grid-area: main;
+    background-color: lightgreen;
+    padding: 50px 20px;
+}
+
+.foot {
+    grid-area: foot;
+    background-color: pink;
+    padding: 30px;
+}
+
+    </style>
+</head>
+<body>
+
+    <h1>CSS Grid Areas</h1>
+
+    <div class="container">
+
+        <div class="head">Header</div>
+
+        <div class="side">Sidebar</div>
+
+        <div class="main">Main Content</div>
+
+        <div class="foot">Footer</div>
+
+    </div>
+
+</body>
+</html>
