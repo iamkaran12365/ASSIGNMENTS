@@ -1,0 +1,25 @@
+
+:root {
+    --main-color: blue;
+    --bg-color: lightyellow;
+    --text-color: black;
+    --spacing: 20px;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: var(--spacing);
+}
+
+h1 {
+    color: var(--main-color);
+    font-size: 32px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: var(--spacing);
+}
