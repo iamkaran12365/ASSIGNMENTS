@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid and Flexbox</title>
+
+    <style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "head head"
+        "side main"
+        "foot foot";
+
+    grid-template-columns: 1fr 3fr;
+    gap: 15px;
+    padding: 20px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 30px;
+    font-size: 20px;
+    border: 2px solid black;
+}
+
+.head {
+    grid-area: head;
+    background-color: orange;
+}
+
+.side {
+    grid-area: side;
+    background-color: lightblue;
+}
+
+.main {
+    grid-area: main;
+    background-color: lightgreen;
+}
+
+.foot {
+    grid-area: foot;
+    background-color: pink;
+}
+
+.icon {
+    font-size: 30px;
+}
+
+    </style>
+</head>
+<body>
+
+    <h1>Grid and Flexbox Layout</h1>
+
+    <div class="container">
+
+        <div class="box head">
+            <span class="icon">🏠</span>
+            <span>Header</span>
+        </div>
+
+        <div class="box side">
+            <span class="icon">📋</span>
+            <span>Sidebar</span>
+        </div>
+
+        <div class="box main">
+            <span class="icon">💻</span>
+            <span>Main Content</span>
+        </div>
+
+        <div class="box foot">
+            <span class="icon">📞</span>
+            <span>Footer</span>
+        </div>
+
+    </div>
+
+</body>
+</html>
