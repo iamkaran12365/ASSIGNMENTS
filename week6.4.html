@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sticky and Fixed</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+
+        .topbar {
+            background-color: blue;
+            color: white;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .content {
+            padding: 20px;
+            height: 1200px;
+        }
+
+        .plus-button {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background-color: green;
+            color: white;
+            font-size: 30px;
+            border: none;
+            cursor: pointer;
+            z-index: 200;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topbar">
+        <h2>My Website</h2>
+    </div>
+
+    <div class="content">
+        <h2>Welcome to My Website</h2>
+        <p>This is my CSS assignment 6.4.</p>
+        <p>Scroll down to see the sticky top bar.</p>
+        <p>The top bar will remain at the top.</p>
+        <p>The plus button will stay fixed at the bottom.</p>
+    </div>
+
+    <button class="plus-button">+</button>
+
+</body>
+</html>
