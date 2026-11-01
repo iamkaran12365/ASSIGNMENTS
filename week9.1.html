@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Website</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 15px;
+}
+
+/* Mobile Layout - Default */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.box {
+    background-color: orange;
+    padding: 40px;
+    font-size: 22px;
+    border: 2px solid black;
+}
+
+/* Tablet Layout - 768px */
+
+@media (min-width: 768px) {
+
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .box {
+        background-color: lightblue;
+    }
+
+}
+
+/* Desktop Layout - 1024px */
+
+@media (min-width: 1024px) {
+
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .box {
+        background-color: lightgreen;
+    }
+
+}
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Responsive Website</h1>
+
+    <div class="container">
+
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+        <div class="box">Box 6</div>
+
+    </div>
+
+</body>
+</html>
